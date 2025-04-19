@@ -110,6 +110,7 @@ jobs:
     needs: [ package-artifacts ]
     steps:
       - uses: actions/checkout@v3
+        run: chmod +x ./deploy.sh
       - name: Deploy to Staging
         run: ./deploy.sh staging
 
@@ -120,6 +121,7 @@ jobs:
     needs: [ deploy-staging ]
     steps:
       - uses: actions/checkout@v3
+        run: chmod +x ./deploy.sh
       - name: Deploy to Production
         run: ./deploy.sh production
 
