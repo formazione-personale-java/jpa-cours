@@ -10,7 +10,8 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-public class EmployeRestController {
+public class EmployeRestController
+{
     private EmployeRepository employeRepository;
     @GetMapping("/index")
     public List<Employee> inedex(){
